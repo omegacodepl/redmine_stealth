@@ -1,0 +1,29 @@
+h1. Redmine Stealth
+
+This is a plugin for the "Redmine project management application":http://www.redmine.org that allows users to temporarily disable the automatic emails which are sent out (depending on configuration) when content is added or changed, such as when updating issues or wiki pages. The intent of this plugin is to allow users to make bulk changes or minor corrections without flooding the inboxes of other users of a project.
+
+h2. Installation
+
+# Install the redmine_stealth plugin into your redmine plugins directory:
+# git clone https://github.com/omegacodepl/redmine_stealth.git
+# plugins/redmine_stealth (or vendor/plugins/redmine_stealth for Redmine 1.)
+# Restart any running Redmine application servers or touch tmp/restart.txt for Passenger
+# Configure the per-role permissions for "Toggle stealth mode" as desired
+
+h2. Usage
+
+# Click "Enable stealth mode" in the account menu in the upper right corner. If you don't see this option, the "Toggle stealth mode" permission may not be enabled for your role.
+# Do whatever it is that needs doing. Redmine will not send emails as a result of your actions while stealth mode is enabled. Other users's actions will continue to send email unless they have also activated stealth mode.
+# Click "Disable stealth mode" in the account menu. Don't worry. You got away with it.
+
+h2. Compatibility
+* Version 0.7.0 was written for Redmine 4.1 and tested for backwards-compatibility with Redmine 3.1.
+* Version 0.6.0 was written for Redmine 2.1.2 and tested for backwards-compatibility with Redmine 2.0.3 and Redmine 1.4.3.
+* Version 0.5.0 was written for Redmine 2.0.3 and tested for backwards-compatibility with Redmine 1.4.3.
+* Version 0.4.0 was written for Redmine 1.4.3 and added support for Ruby 1.9.
+* Previous versions were written for Redmine 0.9.1.stable and reported to work with Redmine 1.1.2 and 1.3-stable.
+* Compatibility with Chiliproject is unknown, but patches are welcome.
+
+h2. License
+
+This software is licensed under the GNU GPL v2. See COPYRIGHT and COPYING for details.
